@@ -1,0 +1,286 @@
+body {
+  margin: 0;
+  color:aliceblue;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  overflow-x: hidden;
+}
+#welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 60px 0px 0px;
+    text-align: center;
+    background: rgb(44, 42, 42);
+    
+  }
+  #welcome-section h1 {
+    margin: 0;
+    font-size: 60px;
+  }
+  #welcome-section p {
+    font-size: 30px;
+    color: rgb(209, 34, 72);
+    font-style: italic;
+  }
+  #navbar {  
+      background: rgb(209, 34, 72);
+      display: flex;
+      width: 100vw;
+      height: 60px;  
+      justify-content: flex-end;
+      align-items: center;  
+      position: fixed;
+      top: 0;
+      right: 0; 
+      grid-gap: 10px;
+      
+  }
+  
+  
+  #navbar li {  
+      list-style-type: none;
+      display: flex;
+      justify-items: center;
+      align-items: center; 
+      width: 90px;
+      height: inherit;
+      margin: auto 0px;
+      
+  }
+  
+  #navbar li:hover{  
+    background-color: rgb(49, 77, 138);
+  
+}
+.nav-link {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  width: inherit;
+  
+  height: inherit;
+}
+
+.nav-link:link {
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 22px;
+  }
+
+  
+.nav-link:visited {
+    color: aliceblue;
+  }
+#projects hr {
+  width: 550px;
+  margin: 0 auto;
+}
+
+#projects {
+  background: rgb(49, 77, 138);
+  text-align: center;
+  height: fit-content;
+  padding: 100px;
+}
+#projects h1 {
+  margin: 0;
+  
+  font-size: 50px;
+  text-align: center;
+}
+
+img {
+  width: 380px;
+  height: 370px; 
+  min-width: 320px;
+  object-fit: cover;
+}
+
+
+.project-tile {
+  width: 380px;
+  height: 440px;
+  background: rgb(44, 42, 42);
+  
+}
+
+
+
+.project-list {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, 380px);
+  grid-template-rows: repeat(2, auto);
+  justify-items: center;
+  align-items: center;
+  grid-gap: 40px;
+  justify-content: center;
+  margin-top: 50px;
+  
+    
+}
+#contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(44, 42, 42);
+  height: 85vh;
+  
+}
+#contact-info .contact-links{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 40px;
+  flex-wrap: wrap;
+  
+  
+}
+#contact-info .contact-links li{
+  list-style-type: none;
+  position: relative;
+
+  transition: top 2s ease-in;
+}
+
+
+#contact-info .contact-links li:hover{
+  top: 10px;
+
+  
+}
+
+#contact-info h1 {
+  font-size: 60px;
+  margin: 0;
+}
+#contact-info p {
+  font-size: 20px;
+  margin: 10px 0px;
+  font-style: italic;
+}
+.footer-link:link {
+  text-decoration: none;
+  color: aliceblue;
+  font-size: 23px;
+  
+}
+
+
+.footer-link:visited {
+  color: aliceblue;
+}
+.footer-section{
+  background: rgb(44, 42, 42);
+  
+
+}
+.footer-info {
+  display: flex;
+  justify-content: center;
+  grid-gap: 20vw;
+  font-size: 20px;
+  padding: 20px;
+}
+.footer-section hr{
+  border-color:rgb(209, 34, 72);
+  margin: 0;
+  border-width: 2px;
+      
+}
+#copyright {
+  margin-bottom: 0;
+}
+.project-tile h2{
+  background: rgb(44, 42, 42);
+  margin: 0;
+
+  
+}
+
+#more-projects  {
+  background: rgb(44, 42, 42);
+  margin: 60px auto 0px;
+  width: 120px;  
+  
+}
+#more-projects:hover {
+  background: rgb(209, 34, 72);
+}
+
+.project-link{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  width: 380px;
+  
+  height: 60px;
+}
+
+.project-link:link {
+  text-decoration: none;
+  color: aliceblue;
+  font-size: 23px;
+  
+}
+
+
+.project-link:visited {
+  color: aliceblue;
+}
+.project-hover, .more-project-hover {
+  visibility: hidden;
+  
+}
+.show-all {
+  width: inherit;
+  
+  height: 55px;
+}
+.more-project-hover {
+  position: relative;
+  
+}
+.project-tile:hover .project-hover{
+  visibility:visible;
+  color: rgb(228, 104, 33);
+}
+#more-projects:hover .more-project-hover{
+  visibility:visible;
+  animation-name: slide-left;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes slide-left {
+  0% {
+    left: 0px;
+  }
+  100% {
+    left: 4px;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+
+  
+  .project-list {
+   
+    grid-template-columns: repeat(auto-fill, minmax(320px, 380px));
+    
+  }
+}
+@media screen and (max-width: 700px) {
+  #projects hr {
+    border-color: red;
+    width: 70vw;
+  }
+  
+}
+
+
+  
+  
